@@ -5,6 +5,10 @@
 	.icon {
 		background-image: url("/assets/images/icons/sprite/{{{sprite}}}");
 	}
+
+	.no-svg .icon {
+		background-image: url("/assets/images/icons/sprite/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}");
+	}
 	{{/first}}
 
 	.icon--{{base}} {
