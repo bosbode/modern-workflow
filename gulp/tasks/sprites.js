@@ -30,7 +30,7 @@ var config = {
 };
 
 gulp.task("beginClean", function(){
-	return del(["./app/temp/sprite/", "./app/assets/images/icons/sprite"]);
+	return del(["./app/temp/sprite/", "./app/assets/images/sprite"]);
 });
 
 gulp.task("createSprite", ["beginClean"], function(){
@@ -47,7 +47,7 @@ gulp.task("createPngCopy", ["createSprite"], function(){
 
 gulp.task("copySpriteGraphic", ["createPngCopy"] ,function(){
 	return gulp.src("./app/temp/sprite/css/**/*.{svg,png}")
-	.pipe(gulp.dest("./app/assets/images/icons/sprite"));
+	.pipe(gulp.dest("./app/assets/images/sprite"));
 });
 
 gulp.task("copySpriteCSS", ["createSprite"], function(){
